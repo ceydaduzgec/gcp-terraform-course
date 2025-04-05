@@ -43,3 +43,6 @@ https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/c
 ### PART 5:
 - Use modules
 https://github.com/orgs/terraform-google-modules/repositories
+
+## Do not forget to delete resources
+`terraform destroy`
