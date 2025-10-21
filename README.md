@@ -1,16 +1,15 @@
 ## To delete cache
 
-`find . -type f -name ".terraform.lock.hcl" -exec rm -f {} \;`
-
-`find . -type d -name ".terraform" -prune -exec rm -rf {} \;`
+find . -type f -name ".terraform*" -exec rm -f {} \;
+find . -type f -name "terraform*" -prune -exec rm -rf {} \;
+find . -type d -name ".terraform*" -prune -exec rm -rf {} \;
 
 ## To initialize project
 
-`gcloud services enable compute.googleapis.com`
+gcloud services enable compute.googleapis.com
 
-`gcloud auth application-default login`
-
-`terraform init`
+gcloud auth application-default login
+terraform init
 
 ## Previous HW:
 
@@ -27,21 +26,22 @@ References to Values: https://developer.hashicorp.com/terraform/language/express
 https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance
 
 ### PART 2:
-- Create subnet for VM instance
-- Add WAF to allow 443 and 80 from 0.0.0.0
-- Allow 22 to SSH
-- Install apache2 to serve a basic HTML with metadata_startup_script
+[X]- Hardcode provider version
+[X]- Create subnet for VM instance
+[ ]- Add WAF to allow 443 and 80 from 0.0.0.0
+[ ]- Allow 22 to SSH from 0.0.0.0
+[ ]- Install apache2 to serve a basic HTML with metadata_startup_script
 
 ### PART 3:
-- Seperate configs into new files
-- Create bucket with terraform
+[ ]- Seperate configs into new files
+[ ]- Create bucket with terraform
 
 ### PART 4:
-- Depends on attribute, tags for best-practice
-- Store state in the bucket
+[ ]- Depends on attribute, tags for best-practice
+[ ]- Store state in the bucket
 
 ### PART 5:
-- Use modules
+[ ]- Use modules
 https://github.com/orgs/terraform-google-modules/repositories
 
 ## Do not forget to delete resources
