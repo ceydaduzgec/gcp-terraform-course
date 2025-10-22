@@ -7,6 +7,7 @@ provider "google" {
 resource "google_compute_instance" "vm_instance" {
   name         = "terraform-instance"
   machine_type = "e2-micro"
+  deletion_protection = true
 
   boot_disk {
     initialize_params {

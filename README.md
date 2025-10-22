@@ -29,7 +29,7 @@ https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/c
 [X]- Hardcode provider version
 [X]- Create subnet for VM instance
 [X]- Add label
-[ ]- Add WAF to allow 443 and 80 from 0.0.0.0
+[ ]- Add firewall to allow 443 and 80 from 0.0.0.0
 [ ]- Allow 22 to SSH from 0.0.0.0
 [ ]- Install apache2 to serve a basic HTML with metadata_startup_script
 
@@ -38,7 +38,7 @@ https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/c
 [ ]- Create bucket with terraform
 
 ### PART 4:
-[ ]- Depends on attribute, tags for best-practice
+[ ]- Depends on attribute
 [ ]- Store state in the bucket
 
 ### PART 5:
