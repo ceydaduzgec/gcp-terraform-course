@@ -21,9 +21,11 @@ resource "google_compute_instance" "my_instance" {
       // Ephemeral IP
     }
   }
-  labels = {
+  labels = { # billing, and monitoring purposes
     env = "test"
   }
+
+  tags = ["web-server", "allow-http", "allow-ssh"] # network traffic control and firewall rules
 }
 
 resource "google_compute_network" "vpc_network" {
