@@ -28,6 +28,7 @@ https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/c
 ### PART 2:
 [X]- Hardcode provider version
 [X]- Create subnet for VM instance
+[X]- Add label
 [ ]- Add WAF to allow 443 and 80 from 0.0.0.0
 [ ]- Allow 22 to SSH from 0.0.0.0
 [ ]- Install apache2 to serve a basic HTML with metadata_startup_script

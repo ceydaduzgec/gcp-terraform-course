@@ -38,6 +38,10 @@ resource "google_compute_instance" "web_server" {
     }
   }
 
+  labels = {
+    env = "test"
+  }
+
   network_interface {
     subnetwork = google_compute_subnetwork.subnet.name
     access_config {

@@ -4,7 +4,7 @@ provider "google" {
   zone    = "us-central1-a" # The zone where you want to create the resources
 }
 
-resource "google_compute_instance" "my_instance" {
+resource "google_compute_instance" "vm_instance" {
   name         = "terraform-instance"
   machine_type = "e2-micro"
 
@@ -21,16 +21,9 @@ resource "google_compute_instance" "my_instance" {
       // Ephemeral IP
     }
   }
-  labels = {
-    env = "test"
-  }
 }
 
 resource "google_compute_network" "vpc_network" {
   name                    = "terraform-network"
   auto_create_subnetworks = "true"
-}
-
-output "instance_ip" {
-  value = google_compute_instance.my_instance.network_interface.0.access_config.0.nat_ip
 }
